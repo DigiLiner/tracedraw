@@ -4,7 +4,7 @@ Versions follow the tags of this repository; every push to `main` also
 publishes a nightly build. [`docs/features.md`](docs/features.md) has the
 full, row-by-row status.
 
-## Unreleased
+## 0.44.1 (2026-11-12)
 
 - PDF import: CMYK photos come in as they look. A CMYK JPEG drawn with an inverting Decode array, the usual way such photos are saved in a PDF, came in as a negative, like an X-ray; the photo's inks are now read through its Decode array as for any other picture (#2322).
 - Blend: the steps of a blend from a front object to one behind it stay behind the front object after the two are grouped, recoloured as a group or placed inside a frame. At the next change of the drawing they jumped in front of it, so a grouped blend of two texts suddenly looked all in the colour of the text behind; the order of the two objects is now read inside groups and frames too (#2023, #2120).
