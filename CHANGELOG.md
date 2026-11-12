@@ -6,6 +6,7 @@ full, row-by-row status.
 
 ## Unreleased
 
+- VBA macros: `Page.Paper` reads the page's paper size by name ("A4", "" for a size of its own) and sets a paper by name, and `OutlineStyles`, `ArrowHeads` and the full `Outline.SetProperties` (style, line caps and joins, behind fill, scale with object, nib) are there. A published tiling macro stopped with run-time error 438 on `Paper` and then on `OutlineStyles`; it now runs to the end and fills the page with copies (#1255, #2165).
 - Freehand tool: a double-click at each corner draws a line of several straight segments, as in CorelDRAW; a single click ends it, and Space, Enter or Esc end it at the last corner. Clicks made only one segment, and the line stopped there (#2339).
 - Linux (X11): objects copied in TraceDraw paste into other programs as a picture. The copy was offered as SVG text alone, so a presentation or word processor pasted the SVG source as text; it is now offered also as an SVG image and as a PNG picture with a transparent background, drawn only when a program asks for it, and still as text (#2288).
 - Table tool: a font size typed into the property bar while a cell's text is selected sizes that text. The digits went into the cell as well and replaced its selected text with the number; a field of the bar or a docker that has the keyboard now keeps what is typed in it while a cell is active, as it already did while a text was edited (#2328).
