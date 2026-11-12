@@ -6,6 +6,8 @@ full, row-by-row status.
 
 ## Unreleased
 
+- Pick tool: a group, clip frame or symbol lying on top is picked only where one of its objects is (a clip frame on its frame and where its contents show), no longer anywhere in its box. A click in the empty part of a group that covers other objects now takes the object inside or behind it, as it shows (#885).
+- Multipage View: an object moved onto another page's paper becomes that page's, where it was let go, and that page becomes current with it selected, in one undo step. It stayed the first page's, off its paper (#2055).
 - Saving: `.tdraw` files are several times smaller. They were written with every coordinate on a line of its own, indented further for each group inside a group, so a curve node took half a kilobyte or more and a drawing with many nodes in nested groups grew to tens or hundreds of megabytes, far past the same drawing saved as `.cdr`. The file is now written without line breaks or indents, 3 to 8 times smaller, and earlier versions open it as before (#2345).
 - Convert to Bitmap: a thick outline is kept whole. The bitmap was cut at the object's own box, so the outer half of a 10 pt outline was gone; it now takes in the outlines as they are drawn, their mitred corners and arrowheads too (#2369).
 - Convert to Bitmap in CMYK keeps the CMYK values: a red of C0 M100 Y100 K0 read back C2 M99 Y96, the inks taken back from the screen pixels. The bitmap now keeps the inks the objects print with, and the Color Eyedropper reads them (#2381).
