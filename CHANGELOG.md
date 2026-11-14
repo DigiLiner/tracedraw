@@ -6,6 +6,7 @@ full, row-by-row status.
 
 ## Unreleased
 
+- Macro forms open at the size they were made: every control pushed the window down a little, so a form with many controls came out much taller than in CorelDRAW, with an empty band under its controls (the GRAFISin tiling form, sixty controls, by more than half) (#2165).
 - Mesh fill: with nodes chosen, Ctrl+click on a palette colour mixes a tenth of it into each chosen node, one undo step a click, as it mixes into a uniform fill. It did nothing on a mesh (discussion #2616).
 - Objects docker: with several objects selected, the eye of one of them hides them all, or shows them all when it is hidden, in one undo step, and they stay selected. Only the clicked object changed (#2571).
 - Contour: the contour of an open curve is a closed band round both sides of it, cut straight across at its ends, as in CorelDRAW. The curve was read as closed by a straight line from end to end, so the contour ran round that line too and the steps were on one side only. A line whose ends meet is still contoured as the area it closes (#2577).
